@@ -1,0 +1,230 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: background .2s;
+    -moz-transition: background .2s;
+    -ms-transition: background .2s;
+    -o-transition: background .2s;
+    transition: background .2s;
+    outline: 0;
+}
+
+
+/* Change autocomplete styles in WebKit */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: 0;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+body {
+    background: #d4acad;
+    color: #1f3134;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 10px;
+}
+
+.task-list {
+    margin: 10px 0;
+}
+
+textarea,
+button,
+input[type=text],
+input[type=date] {
+    border: 0;
+}
+
+textarea,
+input[type=text],
+input[type=date] {
+    width: 100%;
+    display: block;
+    background: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .3);
+}
+
+textarea,
+input,
+.task-item {
+    border-radius: 3px;
+    padding: 10px;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+.add-task {
+    overflow: hidden;
+}
+
+.add-task input[type=text] {
+    float: left;
+    width: 84%;
+    margin-right: 1%;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+}
+
+.add-task [type=submit] {
+    width: 15%;
+    cursor: pointer;
+    background: #c97586;
+}
+
+textarea:hover,
+input[type=text]:hover,
+input[type=date]:hover {
+    background: #eee;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=date]:focus {
+    background: #fff;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+button {
+    height: 38px;
+    border-radius: 3px;
+    border: 0;
+}
+
+.task-item {
+    padding: 10px;
+    background: #fff;
+    color: #333;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.task-item.completed {
+    color: #aaa;
+    opacity: 0.4;
+}
+
+.task-item.completed:after {
+    content: " ";
+    height: 1px;
+    background: #aaa;
+    width: 96%;
+    position: relative;
+    top: -8px;
+    display: block;
+    float: right;
+}
+
+.task-list :hover {
+    background: #ddd;
+}
+
+.add-task [type=submit]:hover {
+    background: rgba(222, 133, 151, 1);
+}
+
+.task-detail-mask,
+.task-detail {
+    position: absolute;
+    display: none;
+}
+
+.task-detail {
+    background: #fff;
+    overflow: auto;
+    color: #333;
+    width: 50%;
+    height: 145px;
+    padding: 10px;
+    bottom: 0;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+}
+
+.task-detail .content {
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.task-detail .input-item {
+    margin-bottom: 10px;
+}
+
+.task-detail-mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(30, 30, 30, .6);
+}
+
+.task-content {
+    margin-left: 10px;
+}
+
+.fr {
+    float: right;
+}
+
+.input-item {
+    margin: 10px;
+}
+
+.msg {
+    display: none;
+    text-align: center;
+    background: #ffe264;
+    padding: 10px;
+    color: #333;
+}
+
+.anchor {
+    cursor: pointer;
+}
+
+.alerter {
+    width: 0;
+    height: 0;
+}
+
+button.primary,
+[type=submit] {
+    background: #46b1e4;
+}
